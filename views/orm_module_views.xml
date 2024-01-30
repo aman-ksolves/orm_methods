@@ -8,20 +8,20 @@
             <field name="arch" type="xml">
                 <form>
                     <header>
-                        <button string="Create Child Record" type="object" class="oe_highlight"
+                        <button string="Create Child Record 0,0,val" type="object" class="oe_highlight"
                                 name="create_child_record"/>
-                        <button string="Update Parent Name" type="object" class="oe_highlight"
+                        <button string="Update Parent Name 1,id,vals" type="object" class="oe_highlight"
                                 name="update_parent_name"/>
-                        <button string="Delete Child Records" type="object" class="oe_highlight"
+                        <button string="Unlink all Child Records or Clear 5,0,0" type="object" class="oe_highlight"
                                 name="delete_child_records"/>
 
 
-                        <button string="Replace Child Records" type="object" class="oe_highlight"
+                        <button string="Replace Child Records 6,0,existing ids" type="object" class="oe_highlight"
                                 name="replace_child_records"/>
-                        <button string="Custom Function 1" type="object" class="oe_highlight"
+                        <button string="link 4,id or Unlink 3,id or delete 2,id" type="object" class="oe_highlight"
                                 name="custom_function_1"/>
-                        <button string="Custom Function 2" type="object" class="oe_highlight"
-                                name="custom_function_2"/>
+                        <button string="Custom Test" type="object" class="oe_highlight"
+                                name="test_with_unlink"/>
                     </header>
                     <sheet>
                         <group>
