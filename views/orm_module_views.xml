@@ -1,0 +1,62 @@
+<odoo>
+    <data>
+
+
+        <record id="view_parent_model_form" model="ir.ui.view">
+            <field name="name">orm_module.parent.form</field>
+            <field name="model">orm_module.parent</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button string="Create Child Record" type="object" class="oe_highlight"
+                                name="create_child_record"/>
+                        <button string="Update Parent Name" type="object" class="oe_highlight"
+                                name="update_parent_name"/>
+                        <button string="Delete Child Records" type="object" class="oe_highlight"
+                                name="delete_child_records"/>
+
+
+                        <button string="Replace Child Records" type="object" class="oe_highlight"
+                                name="replace_child_records"/>
+                        <button string="Custom Function 1" type="object" class="oe_highlight"
+                                name="custom_function_1"/>
+                        <button string="Custom Function 2" type="object" class="oe_highlight"
+                                name="custom_function_2"/>
+                    </header>
+                    <sheet>
+                        <group>
+
+
+                            <field name="name"/>
+                            <field name="child_ids" widget="many2many_tags"/>
+
+
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="view_parent_model_tree" model="ir.ui.view">
+            <field name="name">orm_module.parent.tree</field>
+            <field name="model">orm_module.parent</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="child_ids" widget="many2many_tags"/>
+                </tree>
+            </field>
+        </record>
+        <!-- Main Menu Action -->
+        <record id="action_parent_model" model="ir.actions.act_window">
+            <field name="name">Parents</field>
+            <field name="res_model">orm_module.parent</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Main Menu -->
+        <menuitem id="menu_main" name="My ORM Module" sequence="1"/>
+        <menuitem id="menu_parent" name="Parents" parent="menu_main"/>
+        <menuitem id="menu_parent_action" name="Parents" action="action_parent_model" parent="menu_parent"/>
+
+    </data>
+</odoo>
